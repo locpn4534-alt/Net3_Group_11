@@ -34,8 +34,11 @@ UDM_10 - Upload nhiều file sử dụng TCP Socket bằng Python
 - Visual Studio Code
 
 ## Cấu trúc dự án
+## Cấu trúc dự án
+
+```
 Net3_Group11_Project
-│
+
 ├── client/                         (Đạt + Quang)
 │   ├── client.py                   # Chương trình Client
 │   ├── gui.py                      # Giao diện PyQt6
@@ -70,3 +73,4 @@ Net3_Group11_Project
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
