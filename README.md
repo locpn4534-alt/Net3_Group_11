@@ -34,3 +34,39 @@ UDM_10 - Upload nhiều file sử dụng TCP Socket bằng Python
 - Visual Studio Code
 
 ## Cấu trúc dự án
+Net3_Group11_Project
+│
+├── client/                         (Đạt + Quang)
+│   ├── client.py                   # Chương trình Client
+│   ├── gui.py                      # Giao diện PyQt6
+│   ├── upload_engine.py            # Upload Engine
+│   ├── drag_drop.py                # Kéo thả file
+│   ├── progress.py                 # Thanh tiến trình
+│   └── utils.py
+│
+├── server/                         (Phúc)
+│   ├── server.py                   # Server chính
+│   ├── receiver.py                 # Nhận dữ liệu
+│   ├── file_handler.py             # Lưu file
+│   └── utils.py
+│
+├── core/                           (Huy)
+│   ├── file_manager.py             # Quản lý danh sách file
+│   ├── queue_manager.py            # Quản lý hàng đợi
+│   ├── status.py                   # Trạng thái upload
+│   └── config.py                   # Cấu hình chung
+│
+├── uploads/                        # File sau khi upload
+│   └── .gitkeep
+│
+├── test_files/                     # File dùng để test
+│   └── .gitkeep
+│
+├── docs/
+│   ├── protocol.md                 # Giao thức truyền file
+│   ├── report.pdf                  # Báo cáo
+│   └── images/                     # Ảnh minh họa
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
