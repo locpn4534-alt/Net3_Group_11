@@ -1,11 +1,9 @@
 # Net3_Group_11
 
 ## Môn học
-
 Lập trình mạng
 
 ## Đề tài
-
 UDM_10 - Upload nhiều file sử dụng TCP Socket bằng Python
 
 ## Thành viên
@@ -33,7 +31,6 @@ UDM_10 - Upload nhiều file sử dụng TCP Socket bằng Python
 - Git & GitHub
 - Visual Studio Code
 
-## Cấu trúc dự án
 ## Cấu trúc dự án
 
 ```
@@ -74,3 +71,8 @@ Net3_Group11_Project
 ├── requirements.txt
 └── .gitignore
 ```
+## Trạng thái dự án
+
+- Đã tạo repository.
+- Đã phân chia nhiệm vụ cho các thành viên.
+- Đang phát triển các module.
