@@ -1,9 +1,11 @@
 # Net3_Group_11
 
 ## Môn học
+
 Lập trình mạng
 
 ## Đề tài
+
 UDM_10 - Upload nhiều file sử dụng TCP Socket bằng Python
 
 ## Thành viên
@@ -71,8 +73,18 @@ Net3_Group11_Project
 ├── requirements.txt
 └── .gitignore
 ```
-## Trạng thái dự án
 
-- Đã tạo repository.
-- Đã phân chia nhiệm vụ cho các thành viên.
-- Đang phát triển các module.
+## Tiến độ dự án
+
+- [x] Khởi tạo Repository
+- [x] Xây dựng cấu trúc dự án
+- [x] Phát triển Client cơ bản
+- [x] Phát triển File Manager & Upload Queue
+- [x] Phát triển Server & File Receiver
+- [x] Xây dựng File Sender
+- [x] Xây dựng tài liệu giao thức
+- [ ] Phát triển GUI & Drag/Drop
+- [ ] Hoàn thiện Upload Engine
+- [ ] Tích hợp toàn bộ hệ thống
+- [ ] Kiểm thử toàn hệ thống
+- [ ] Hoàn thiện báo cáo
