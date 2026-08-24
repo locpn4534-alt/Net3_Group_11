@@ -1,0 +1,6 @@
+PyQt6
+requests
+requests-toolbelt
+fastapi
+uvicorn
+python-multipart
