@@ -35,40 +35,44 @@ UDM_10 - Upload nhiều file sử dụng TCP Socket bằng Python
 
 ## Cấu trúc dự án
 
-```
-Net3_Group11_Project
-
-├── client/                         (Đạt + Quang)
-│   ├── client.py                   # Chương trình Client
-│   ├── gui.py                      # Giao diện PyQt6
-│   ├── upload_engine.py            # Upload Engine
-│   ├── drag_drop.py                # Kéo thả file
-│   ├── progress.py                 # Thanh tiến trình
+```text
+Net3_Group_11
+│
+├── client/
+│   ├── client.py
+│   ├── file_sender.py
+│   ├── utils.py
+│   └── client/
+│       └── core/
+│           ├── file_item.py
+│           ├── file_manager.py
+│           ├── test_file_manager.py
+│           └── upload_queue.py
+│
+├── UploadEngine/
+│   ├── main.py
+│   └── upload/
+│       ├── progress.py
+│       ├── upload_worker.py
+│       └── uploader.py
+│
+├── project/
+│   ├── main.py
+│   └── ui/
+│       ├── drop_area.py
+│       ├── file_table.py
+│       └── main_window.py
+│
+├── server/
+│   ├── server.py
+│   ├── file_receiver.py
 │   └── utils.py
-│
-├── server/                         (Phúc)
-│   ├── server.py                   # Server chính
-│   ├── receiver.py                 # Nhận dữ liệu
-│   ├── file_handler.py             # Lưu file
-│   └── utils.py
-│
-├── core/                           (Huy)
-│   ├── file_manager.py             # Quản lý danh sách file
-│   ├── queue_manager.py            # Quản lý hàng đợi
-│   ├── status.py                   # Trạng thái upload
-│   └── config.py                   # Cấu hình chung
-│
-├── uploads/                        # File sau khi upload
-│   └── .gitkeep
-│
-├── test_files/                     # File dùng để test
-│   └── .gitkeep
 │
 ├── docs/
-│   ├── protocol.md                 # Giao thức truyền file
-│   ├── report.pdf                  # Báo cáo
-│   └── images/                     # Ảnh minh họa
+│   └── protocol.md
 │
+├── test_files/
+├── uploads/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
