@@ -78,13 +78,13 @@ Net3_Group11_Project
 
 - [x] Khởi tạo Repository
 - [x] Xây dựng cấu trúc dự án
-- [x] Phát triển Client cơ bản
 - [x] Phát triển File Manager & Upload Queue
 - [x] Phát triển Server & File Receiver
-- [x] Xây dựng File Sender
+- [x] Phát triển File Sender
+- [x] Phát triển GUI & Drag/Drop cơ bản
+- [x] Phát triển Upload Engine cơ bản
 - [x] Xây dựng tài liệu giao thức
-- [ ] Phát triển GUI & Drag/Drop
-- [ ] Hoàn thiện Upload Engine
 - [ ] Tích hợp toàn bộ hệ thống
 - [ ] Kiểm thử toàn hệ thống
+- [ ] Xử lý lỗi tích hợp
 - [ ] Hoàn thiện báo cáo
