@@ -84,7 +84,7 @@ Net3_Group_11
 - [x] Xây dựng cấu trúc dự án
 - [x] Phát triển File Manager & Upload Queue
 - [x] Phát triển Server & File Receiver
-- [x] Phát triển File Sender
+- [ ] Phát triển File Sender
 - [x] Phát triển GUI & Drag/Drop cơ bản
 - [x] Phát triển Upload Engine cơ bản
 - [ ] Hoàn thiện tài liệu giao thức
@@ -98,25 +98,25 @@ Net3_Group_11
 
 ## Trạng thái kiểm thử
 
-| Module                        | Trạng thái | Ghi chú                                     |
-|-------------------------------|------------|---------------------------------------------|
-| File Manager & Upload Queue   | PASS       | Queue, FIFO và giới hạn upload đã kiểm thử  |
-| Server & File Receiver        | PASS       | Upload và xử lý file trùng tên đã kiểm thử  |
-| GUI & Drag/Drop               | PARTIAL    | GUI hoạt động, nút Upload chưa kết nối      |
-| Upload Engine                 | FAIL       | Lỗi tương thích với FileItem                |
-| Integration toàn hệ thống     | CHƯA TEST  | Chờ hoàn thiện kết nối các module           |
+| Module                      | Trạng thái | Ghi chú                                              |
+| --------------------------- | ---------- | ---------------------------------------------------- |
+| File Manager & Upload Queue | PASS       | Queue, FIFO và giới hạn upload đã kiểm thử           |
+| Server & File Receiver      | PASS       | Health Check, upload và file trùng đã kiểm thử       |
+| GUI & Drag/Drop             | PARTIAL    | GUI hoạt động, nút Upload chưa tích hợp              |
+| Upload Engine               | FAIL       | Upload gửi sai field `file`, Server yêu cầu `files`  |
+| Integration toàn hệ thống   | CHƯA TEST  | Chưa hoàn thiện kết nối GUI, Upload Engine và Server |
 
-> **Trạng thái hiện tại:** Các module chính đã được kiểm thử riêng lẻ. Kiểm thử tích hợp toàn hệ thống chưa hoàn thành.
+> **Trạng thái hiện tại:** Các module chính đã được kiểm thử riêng lẻ. GUI và Server hoạt động, nhưng phần tích hợp Upload Engine chưa hoàn thiện nên kiểm thử toàn hệ thống chưa thể thực hiện.
 
 ---
 
 ## Tài liệu
 
-| Tài liệu                    | Mô tả                                      |
-|-----------------------------|--------------------------------------------|
-| `docs/test_plan.md`         | Kế hoạch và kết quả kiểm thử               |
-| `docs/protocol.md`          | Đặc tả giao tiếp giữa Client và Server     |
-| `requirements.txt`          | Danh sách thư viện của dự án               |
-| `README.md`                 | Tổng quan và tiến độ dự án                 |
+| Tài liệu            | Mô tả                                  |
+| ------------------- | -------------------------------------- |
+| `docs/test_plan.md` | Kế hoạch và kết quả kiểm thử           |
+| `docs/protocol.md`  | Đặc tả giao tiếp giữa Client và Server |
+| `requirements.txt`  | Danh sách thư viện của dự án           |
+| `README.md`         | Tổng quan và tiến độ dự án             |
 
 ---
