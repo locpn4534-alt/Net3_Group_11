@@ -84,11 +84,11 @@ Net3_Group_11
 - [x] Xây dựng cấu trúc dự án
 - [x] Phát triển File Manager & Upload Queue
 - [x] Phát triển Server & File Receiver
-- [ ] Phát triển File Sender
+- [x] Phát triển File Sender
 - [x] Phát triển GUI & Drag/Drop cơ bản
 - [x] Phát triển Upload Engine cơ bản
-- [ ] Hoàn thiện tài liệu giao thức
-- [ ] Tích hợp toàn bộ hệ thống
+- [ ] Hoàn thiện tài liệu giáo trình
+- [ ] Tích hợp hoàn bộ hệ thống
 - [x] Kiểm thử từng module
 - [ ] Kiểm thử toàn hệ thống
 - [ ] Xử lý lỗi tích hợp
@@ -98,15 +98,15 @@ Net3_Group_11
 
 ## Trạng thái kiểm thử
 
-| Module                      | Trạng thái | Ghi chú                                              |
-| --------------------------- | ---------- | ---------------------------------------------------- |
-| File Manager & Upload Queue | PASS       | Queue, FIFO và giới hạn upload đã kiểm thử           |
-| Server & File Receiver      | PASS       | Health Check, upload và file trùng đã kiểm thử       |
-| GUI & Drag/Drop             | PARTIAL    | GUI hoạt động, nút Upload chưa tích hợp              |
-| Upload Engine               | FAIL       | Upload gửi sai field `file`, Server yêu cầu `files`  |
-| Integration toàn hệ thống   | CHƯA TEST  | Chưa hoàn thiện kết nối GUI, Upload Engine và Server |
+| Module                      | Trạng thái | Ghi chú                                      |
+|-----------------------------|------------|----------------------------------------------|
+| File Manager & Upload Queue | PASS       | Queue, FIFO và giới hạn upload đã kiểm thử   |
+| Server & File Receiver      | PASS       | Health Check, upload và xử lý file trùng     |
+| GUI & Drag/Drop             | PARTIAL    | GUI hoạt động, nút Upload đang tích hợp      |
+| Upload Engine               | PASS       | Upload file và nhiều file đã kiểm thử        |
+| Integration toàn hệ thống   | CHƯA TEST  | Chưa hoàn thiện kết nối GUI với Upload Engine|
 
-> **Trạng thái hiện tại:** Các module chính đã được kiểm thử riêng lẻ. GUI và Server hoạt động, nhưng phần tích hợp Upload Engine chưa hoàn thiện nên kiểm thử toàn hệ thống chưa thể thực hiện.
+> **Trạng thái hiện tại:** Các module đã được kiểm thử riêng. GUI và Upload Engine hoạt động độc lập, nhưng phần tích hợp GUI với Upload Engine chưa hoàn thiện.
 
 ---
 
