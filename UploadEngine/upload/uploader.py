@@ -2,8 +2,8 @@ import os
 import uuid
 from PyQt6.QtCore import QObject, QThreadPool, pyqtSignal
 
-from upload.progress import FileStatus
-from upload.upload_worker import UploadWorker
+from .progress import FileStatus
+from .upload_worker import UploadWorker
 
 
 class UploadManager(QObject):

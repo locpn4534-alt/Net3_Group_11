@@ -87,10 +87,9 @@ Net3_Group_11
 - [x] Phát triển File Sender
 - [x] Phát triển GUI & Drag/Drop cơ bản
 - [x] Phát triển Upload Engine cơ bản
-- [ ] Hoàn thiện tài liệu giáo trình
-- [ ] Tích hợp hoàn bộ hệ thống
+- [x] Tích hợp hoàn bộ hệ thống
 - [x] Kiểm thử từng module
-- [ ] Kiểm thử toàn hệ thống
+- [x] Kiểm thử toàn hệ thống
 - [ ] Xử lý lỗi tích hợp
 - [ ] Hoàn thiện báo cáo
 
@@ -98,15 +97,13 @@ Net3_Group_11
 
 ## Trạng thái kiểm thử
 
-| Module                      | Trạng thái | Ghi chú                                      |
-|-----------------------------|------------|----------------------------------------------|
-| File Manager & Upload Queue | PASS       | Queue, FIFO và giới hạn upload đã kiểm thử   |
-| Server & File Receiver      | PASS       | Health Check, upload và xử lý file trùng     |
-| GUI & Drag/Drop             | PARTIAL    | GUI hoạt động, nút Upload đang tích hợp      |
-| Upload Engine               | PASS       | Upload file và nhiều file đã kiểm thử        |
-| Integration toàn hệ thống   | CHƯA TEST  | Chưa hoàn thiện kết nối GUI với Upload Engine|
-
-> **Trạng thái hiện tại:** Các module đã được kiểm thử riêng. GUI và Upload Engine hoạt động độc lập, nhưng phần tích hợp GUI với Upload Engine chưa hoàn thiện.
+| Module                      | Trạng thái         | Ghi chú                                      |
+|-----------------------------|--------------------|----------------------------------------------|
+| File Manager & Upload Queue | PASS               | Queue, FIFO, giới hạn upload                 |
+| Server & File Receiver      | PASS               | Health Check, upload, file trùng             |
+| GUI & Drag/Drop             | PASS               | GUI, Drag/Drop, Upload                       |
+| Upload Engine               | PASS               | Upload file và nhiều file                    |
+| Integration toàn hệ thống   | CHƯA HOÀN THIỆN    | Còn Overall Progress và Speed                 |
 
 ---
 

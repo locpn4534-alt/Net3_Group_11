@@ -27,7 +27,6 @@
 | Xử lý file trùng tên         | PASS    |
 
 ### Ghi chú
-- Upload file trùng tên được xử lý đúng.
 - Cần kiểm tra lại `saved_files` trong response có trả đúng tên file thực tế sau khi đổi tên hay không.
 
 ---
@@ -41,12 +40,11 @@
 | Hiển thị file     | PASS    |
 | Drag & Drop       | PASS    |
 | Xử lý file trùng  | PASS    |
-| Nút Upload        | FAIL    |
+| Nút Upload        | PASS    |
 | Clear             | PASS    |
+| Overall Progress  | CHƯA HOÀN THIỆN |
 
-### Ghi chú
-
-- Nút `UPLOAD` chưa tích hợp với `UploadManager` nên file vẫn ở trạng thái `Waiting`.
+---
 
 ## Upload Engine (Quang)
 
@@ -59,8 +57,5 @@
 | Upload nhiều file         | PASS    |
 | Kết nối Server            | PASS    |
 | Xử lý lỗi kết nối         | PASS    |
-
-### Ghi chú
-
-- Chưa kiểm thử chức năng `Cancel` và hiển thị `Progress` trên giao diện.
+| Speed                     | CHƯA HOÀN THIỆN |
 

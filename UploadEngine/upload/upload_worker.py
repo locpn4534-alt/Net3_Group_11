@@ -8,7 +8,7 @@ try:
 except ImportError:
     HAS_TOOLBELT = False
 
-from upload.progress import FileStatus, WorkerSignals
+from .progress import FileStatus, WorkerSignals
 
 
 class UploadWorker(QRunnable):
