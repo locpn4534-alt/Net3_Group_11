@@ -59,3 +59,19 @@
 | Xử lý lỗi kết nối         | PASS    |
 | Speed                     | CHƯA HOÀN THIỆN |
 
+---
+
+## Integration & Testing (Lộc)
+
+| Chức năng                    | Kết quả |
+|------------------------------|---------|
+| Tích hợp GUI → Upload Engine | PASS    |
+| Upload Engine → Server       | PASS    |
+| Upload nhiều file từ GUI     | PASS    |
+| Progress từng file           | PASS    |
+| Xử lý lỗi kết nối            | PASS    |
+| Kiểm thử toàn hệ thống       | PASS    |
+
+### Ghi chú
+
+- Overall Progress và Speed đang chờ hoàn thiện để kiểm thử lại.
