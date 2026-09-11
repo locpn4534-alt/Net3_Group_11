@@ -1,6 +1,8 @@
 import os
 import requests
+import time
 from PyQt6.QtCore import QRunnable, pyqtSlot
+
 
 try:
     from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncoderMonitor
@@ -64,6 +66,9 @@ class UploadWorker(QRunnable):
         with open(self.filepath, "rb") as f:
             encoder = MultipartEncoder(fields={"files": (filename, f, "application/octet-stream")})
 
+            start_time = time.monotonic()
+
+
             def _callback(monitor):
                 if self._is_canceled:
                     raise Exception("Upload đã bị hủy bởi người dùng")
@@ -71,7 +76,15 @@ class UploadWorker(QRunnable):
                     percent = int(monitor.bytes_read * 100 / monitor.len)
                     self.signals.progress.emit(self.file_id, percent)
 
+                    elapsed = time.monotonic() - start_time
+
+                    if elapsed > 0:
+                        speed = monitor.bytes_read / elapsed / (1024 * 1024)
+                        self.signals.speed.emit(self.file_id, speed)
+
+
             monitor = MultipartEncoderMonitor(encoder, _callback)
+            
             response = requests.post(
                 f"{self.server_url}/upload",
                 data=monitor,

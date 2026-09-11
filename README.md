@@ -90,7 +90,7 @@ Net3_Group_11
 - [x] Tích hợp hoàn bộ hệ thống
 - [x] Kiểm thử từng module
 - [x] Kiểm thử toàn hệ thống
-- [ ] Xử lý lỗi tích hợp
+- [x] Xử lý lỗi tích hợp
 - [ ] Hoàn thiện báo cáo
 
 ---
@@ -103,7 +103,7 @@ Net3_Group_11
 | Server & File Receiver      | PASS               | Health Check, upload, file trùng             |
 | GUI & Drag/Drop             | PASS               | GUI, Drag/Drop, Upload                       |
 | Upload Engine               | PASS               | Upload file và nhiều file                    |
-| Integration toàn hệ thống   | CHƯA HOÀN THIỆN    | Còn Overall Progress và Speed                 |
+| Integration toàn hệ thống   | PASS               | Còn Overall Progress và Speed                |
 
 ---
 

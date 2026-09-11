@@ -14,6 +14,7 @@ class FileStatus(str, Enum):
 class WorkerSignals(QObject):
     status_changed = pyqtSignal(str, str)
     progress = pyqtSignal(str, int)
+    speed = pyqtSignal(str, float)
     error = pyqtSignal(str, str)
     finished = pyqtSignal(str)
 

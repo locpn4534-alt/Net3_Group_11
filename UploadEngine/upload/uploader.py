@@ -9,6 +9,7 @@ from .upload_worker import UploadWorker
 class UploadManager(QObject):
     file_status_changed = pyqtSignal(str, str, str)
     file_progress = pyqtSignal(str, int)
+    speed = pyqtSignal(str, float)
     file_error = pyqtSignal(str, str, str)
     all_finished = pyqtSignal()
 
@@ -36,6 +37,7 @@ class UploadManager(QObject):
             worker = UploadWorker(file_id, path, self.server_url)
             worker.signals.status_changed.connect(self._on_status_changed)
             worker.signals.progress.connect(self.file_progress.emit)
+            worker.signals.speed.connect(self.speed.emit)
             worker.signals.error.connect(self._on_error)
             worker.signals.finished.connect(self._on_worker_finished)
             self._workers[file_id] = worker

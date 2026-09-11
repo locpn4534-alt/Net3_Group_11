@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):
 
         self.file_row_map = {}
         self.file_id_row_map = {}
+        self.file_progress_map = {}
 
         self.upload_manager = UploadManager("http://127.0.0.1:8000")
 
@@ -31,6 +32,9 @@ class MainWindow(QMainWindow):
 
         self.upload_manager.file_progress.connect(      
             self.on_file_progress
+        )
+        self.upload_manager.speed.connect(
+            self.on_file_speed
         )
         self.upload_manager.file_error.connect(
             self.on_file_error
@@ -107,7 +111,8 @@ class MainWindow(QMainWindow):
     def on_clear_clicked(self):
         self.file_table.clear_all()
         self.file_row_map.clear()
-        self.file_id_row_map.clear()        
+        self.file_id_row_map.clear()
+        self.file_progress_map.clear()        
         self.overall_progress.setValue(0)
         
     def on_file_status_changed(self, file_id, filename, status):
@@ -121,6 +126,20 @@ class MainWindow(QMainWindow):
         if row is not None:
             self.file_table.update_progress(row, percent)
 
+        self.file_progress_map[file_id] = percent
+
+        if self.file_progress_map:
+            overall = sum(self.file_progress_map.values()) // len(self.file_progress_map)
+            self.overall_progress.setValue(overall)
+
+    def on_file_speed(self, file_id, speed):
+        row = self.file_id_row_map.get(file_id)
+
+        if row is not None:
+            self.file_table.update_speed(    
+                row,
+                f"{speed:.2f} MB/s"
+        )
 
     def on_file_error(self, file_id, filename, message):
         print(f"Upload error - {filename}: {message}")

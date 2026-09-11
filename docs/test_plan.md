@@ -26,8 +26,7 @@
 | Upload nhiều file            | PASS    |
 | Xử lý file trùng tên         | PASS    |
 
-### Ghi chú
-- Cần kiểm tra lại `saved_files` trong response có trả đúng tên file thực tế sau khi đổi tên hay không.
+
 
 ---
 
@@ -42,7 +41,7 @@
 | Xử lý file trùng  | PASS    |
 | Nút Upload        | PASS    |
 | Clear             | PASS    |
-| Overall Progress  | CHƯA HOÀN THIỆN |
+| Overall Progress  | PASS    |
 
 ---
 
@@ -57,7 +56,7 @@
 | Upload nhiều file         | PASS    |
 | Kết nối Server            | PASS    |
 | Xử lý lỗi kết nối         | PASS    |
-| Speed                     | CHƯA HOÀN THIỆN |
+| Speed                     | PASS    |
 
 ---
 
@@ -72,6 +71,3 @@
 | Xử lý lỗi kết nối            | PASS    |
 | Kiểm thử toàn hệ thống       | PASS    |
 
-### Ghi chú
-
-- Overall Progress và Speed đang chờ hoàn thiện để kiểm thử lại.
