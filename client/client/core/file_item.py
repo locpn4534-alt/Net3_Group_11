@@ -1,13 +1,13 @@
-from enum import Enum
 from dataclasses import dataclass
+from enum import Enum
 import os
 
 
 class FileStatus(Enum):
-    WAITING = "Waiting"
-    UPLOADING = "Uploading"
-    COMPLETED = "Completed"
-    ERROR = "Error"
+    WAITING = "Chờ"
+    UPLOADING = "Đang tải"
+    COMPLETED = "Hoàn tất"
+    ERROR = "Lỗi"
 
 
 @dataclass
@@ -24,4 +24,6 @@ class FileItem:
 
     @property
     def size(self):
-        return os.path.getsize(self.path)
+        if os.path.exists(self.path):
+            return os.path.getsize(self.path)
+        return 0
