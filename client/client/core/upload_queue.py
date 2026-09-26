@@ -3,7 +3,7 @@ from collections import deque
 
 class UploadQueue:
 
-    def __init__(self, max_concurrent=3):
+    def __init__(self, max_concurrent=2):
         self.queue = deque()
         self.max_concurrent = max_concurrent
         self.active_count = 0
@@ -18,7 +18,6 @@ class UploadQueue:
     def get_next(self):
         if self.queue:
             return self.queue.popleft()
-
         return None
 
     def can_upload(self):
@@ -28,7 +27,6 @@ class UploadQueue:
         if self.can_upload():
             self.active_count += 1
             return True
-
         return False
 
     def finish_upload(self):
@@ -37,3 +35,7 @@ class UploadQueue:
 
     def size(self):
         return len(self.queue)
+
+    def clear(self):
+        self.queue.clear()
+        self.active_count = 0
